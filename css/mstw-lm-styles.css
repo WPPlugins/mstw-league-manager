@@ -1,0 +1,770 @@
+/* 
+ * MSTW League Manager Stylesheet [mstw_lm-styles.css]  
+ *
+ *	MSTW Wordpress Plugins (http://shoalsummitsolutions.com)
+ *	Copyright 2015-16 Mark O'Donnell (mark@shoalsummitsolutions.com)
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by
+ *	the Free Software Foundation, either version 3 of the License, or
+ *	(at your option) any later version.
+
+ *	This program is distributed in the hope that it will be useful,
+ *	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *	GNU General Public License for more details.
+ *
+ *	You should have received a copy of the GNU General Public License
+ *	along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *--------------------------------------------------------------------------*/
+
+/* 
+ * messages appearing on the front-end; 
+ * usually warnings that something is wrong 
+ */
+.mstw-lm-user-msg {
+	color:       red;
+	font-style:  italic;
+	font-weight: normal;
+	}
+	
+
+table.mstw-lm-table td img,
+table.mstw-lm-standings td img,
+table.mstw-lm-schedules td img,
+table.mstw-lm-team-schedule td img
+{
+	vertical-align: middle;
+	padding-right:  5px;
+}
+
+/*----------------------------------------------
+ * Styles for the Schedule Table [shortcode]
+ *----------------------------------------------*/
+table.mstw-lm-table/*, 
+table.mstw-lm-standings,
+table.mstw-lm-schedules,
+table.mstw-lm-team-schedule*/ {
+	color:        rgb(51,51,51);
+	font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+	font-size:    12px;
+	table-layout: fixed;
+	width:        100%;
+	}
+	
+table.mstw-lm-standings,
+table.mstw-lm-schedules,
+table.mstw-lm-team-schedule {
+	table-layout: auto; 
+	}
+	
+table.mstw-lm-gallery-table {
+	table-layout: fixed; 
+	}
+	
+table.mstw-lm-table thead tr th, 
+table.mstw-lm-standings thead tr th,
+table.mstw-lm-team-schedule thead tr th {
+	border:          0;
+	border-top:      1px solid #ddd;
+	border-bottom:   1px solid #ddd;
+	text-transform:  uppercase;
+	font-weight:     normal;
+	/*padding-right:	 10px;*/
+	padding:         3px 0 3px 5px;
+	height:          24px;
+	vertical-align:  middle;
+	}
+	
+table.mstw-lm-table tbody tr td,
+table.mstw-lm-standings tbody tr td,
+table.mstw-lm-team-schedule tbody tr td {
+	border:      0;
+	padding:     3px 0 3px 5px;
+	line-height: 18px;
+	}
+		
+table.mstw-lm-table caption {
+	font-size:     14px;
+	font-weight:   600;
+	margin-top:    0;
+	margin-bottom: 6px;
+	}
+
+table.mstw-lm-table tbody tr td.home-cell::before {
+	content: "at";
+	padding: 0 10px 0 0;
+	}
+	
+table.mstw-lm-gallery-table tbody tr td.visitor-cell::before {
+	content: "vs";
+	padding: 0 10px 0 0;
+	}	
+	
+/*----------------------------------------------
+ * Styles for the Schedule Gallery [shortcode]
+ *----------------------------------------------*/
+ /* DATE HEADER ... A BIT SEPARATE */
+h4.lm-date-header {
+	padding: 12px 6px 6px;
+	margin: 0;
+	font: normal 700 14px Verdana,Arial,Helvetica,sans-serif;
+	color: #454545;
+}
+
+/* GAMES ON A DAY Need this to make game-blocks float properly.*/
+div.lm-schedule-day-container {
+	width: 700px;
+}
+
+h4.lm-date-header, .lm-date-header {
+	color: #000;
+	font-weight: bold;
+}
+
+/* GAME HEADER */
+.lm-schedule-container div.lm-game-header {
+	background: #3F3F3F url( ../images/lm-header-bkgd.png ) top left no-repeat;
+	padding: 2px 6px;
+	border-bottom: 1px solid #DFDFDF;
+	height: 1%;
+	overflow-x: hidden;
+}
+
+.lm-schedule-container div.lm-game-header p {
+	margin:      0;
+	padding:     3px 0;
+	line-height: 1;
+	}
+
+div.lm-header-status {
+	float: left;
+	width: 130px;
+}
+
+p.lm-header-status, p.lm-header-score {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	color: #fff;
+	font-weight: bold;
+}
+
+div.lm-header-score {
+	float: right;
+}
+
+/* TEAM INFO */
+div.lm-team {
+	overflow: hidden;
+	clear: both;
+	padding: 6px 6px 6px 0;
+	border-bottom: 1px solid #DFDFDF;
+	/*background: #FEFEFE url(../images/lm-game-block-bkgd.jpg) top left repeat-x;*/
+	background: #FEFEFE;
+	height: 1%;
+	position: relative;
+}
+
+div.lm-team.lm-winner, .lm-winner {
+	background: rgba(255, 242, 0, 0.290196);
+}
+
+div.lm-team-logo {
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+div.lm-team-name {
+	float: left;
+	width: 200px;
+	overflow: hidden;
+}
+
+p.lm-team-name, p.lm-team-score {
+	font: normal 700 14px Helvetica,Arial,sans-serif;
+	color: #343434;
+	line-height: 28px;
+	padding: 0;
+	margin: 0;
+}
+
+div.lm-team-score {
+	float: right;
+}
+
+div.lm-game-block {
+float: left;
+margin-right: 6px;
+position: relative;
+margin-bottom: 10px;
+width: 300px;
+}
+
+@media only screen and (max-width: 650px), only screen and (max-device-width: 650px) {
+	div.lm-game-block {
+		clear: left;
+	}
+}
+
+/******************************************************/
+/* Styles for the Single Game template  */
+/******************************************************/
+
+.single-game {
+	margin           : 15px;
+	background-color : #fff;
+	padding          : 10px;
+	width            : 600px;
+	border           : 2px solid black;
+	color            : #666;
+	font-size        : 18px;
+	font-family      : "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.single-game a, .single-game a:visited, .single-game a:active {
+	color: #666;
+	text-decoration: underline;
+}
+
+.single-game a:hover {
+	color: #666;
+	text-decoration: none;
+}
+
+/* DATE-TIME BLOCK */
+.single-game .date-time-block {
+	width       : 90%;
+	margin      : 15px auto 15px auto;
+	font-weight : bold;
+	text-align  : center;
+	font-size   : 21px;
+}
+
+/* SCOREBOARD BLOCK (MAIN BLOCK) */
+.single-game .single-game-sb-block {
+	width       : 90%;
+	margin      : 0 auto 15px auto;
+	font-weight : bold;
+	text-align  : center;
+}
+
+.single-game-sb-block .sb-data {
+	
+}
+
+/* DATA BLOCK - 'VS', SCOREBOARD, OR RESULT */
+.single-game-sb-block .sb-data {
+	width     : 30%;
+	float     : left;
+	margin    : 15px 5%;
+	font-size : 36px;
+}
+
+.sb-team-block {
+	width         : 30%;
+	text-align    : center;
+	margin        : auto;
+	margin-bottom : 15px;
+	float         : left;
+}
+
+.sb-team-block img {
+	margin : 0 auto;
+	width  : 120px;
+	height : auto;
+}
+
+div.sb-score, div.sb-status {
+	text-align  : center;
+	font-weight : bold;
+	margin      : 0;
+	padding     : 0;
+}
+
+/* VENUE BLOCK */
+.single-game-venue {
+	clear      : both;
+	width      : 90%;
+	margin     : 0 auto 15px auto;
+	text-align : center;
+}
+
+/* CONTENT BLOCK */
+.single-game-content {
+	clear       : both;
+	width       : 90%;
+	font-size   : 15px;
+	text-align  : left;
+	margin      : 0 auto 15px auto;
+	border-top  : #666 1px solid;
+	padding-top : 5px;
+	color       : #666;
+}
+
+.single-game-content p {
+	margin-bottom: 10px;
+}
+
+/******************************************************
+ * Styles for the Single Game template 
+ ******************************************************/
+ 
+ /* Container for the controls */
+ div.mstw-ms-controls {
+	margin-bottom: 10px;
+	margin-top   : 10px;
+	font-size    : 14px;
+	height       : 28px;
+	display: inline-flex;
+ }
+ 
+ .ms-control,
+ .ms-title {
+	 float      : left;
+	 font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	 color      : black;
+	 font-size  : 100%;
+	 margin     : auto 0;
+ }
+ 
+ .ms-control {
+	 padding-right: 10px;
+ }
+ 
+ .ms-title {
+	 padding-right: 5px;
+ }
+ 
+ .ms-control select {
+    padding    : 2px;
+    line-height: 28px;
+    height     : 28px;
+	font-size  : 100%;
+}
+
+ .ms-control input[type=submit] {
+	padding         : 6px 10px;
+    padding         : 0.428571429rem 0.714285714rem;
+    font-size       : 11px;
+    font-size       : 90%; /*0.785714286rem;*/
+    line-height     : 110%; /*1.428571429;*/
+    font-weight     : normal;
+    color           : #7c7c7c;
+    background-color: #e6e6e6;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+    background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+    background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+    background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+    background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+    border          : 1px solid #d2d2d2;
+    border-radius   : 3px;
+    box-shadow      : 0 1px 2px rgba(64, 64, 64, 0.1);
+	vertical-align  : middle;
+}
+  
+ /******************************************************
+ * Styles for the League Schedule Slider
+ ******************************************************/
+ .lm-slider-area {
+	width: 100%;
+	line-height: 20px;
+	background-color: #fff;
+}
+
+.lm-slider {
+	border: 1px solid #B5B5B5;
+}
+
+.lm-one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px #D2CFCF;
+	-moz-box-shadow: 0 8px 6px -6px #d2cfcf;
+	box-shadow: 0 8px 6px -6px #D2CFCF;
+}
+
+.lm-slider .border {
+	padding: 5px;
+	background: #EAE7E7;
+}
+
+.lm-slider .box { /* WHY IS THIS NEEDED? */
+	background-color: #fff;
+}
+
+.lm-slider .title {
+	font-family:  'Roboto Condensed',Arial, sans-serif;
+	font-weight:  bold;
+	font-size:    18px;
+	line-height:  20px;
+	color:        #041E42;
+	padding:      6px;
+	float:        left;
+}
+
+.lm-slider .full-schedule-link {
+	font-family:  'Oswald',Arial, sans-serif;
+	font-weight:  bold;
+	font-size  : 14px;
+	line-height: 20px;
+	color      : #041E42;
+	padding    : 6px;
+	float      : right;
+}
+
+.lm-slider .full-schedule-link  a, .lm-slider .full-schedule-link  a:visited {
+	color:           #041E42;
+	text-decoration: underline;
+}
+
+.lm-slider .full-schedule-link  a:hover {
+	color:           #041E42;
+	text-decoration: none;
+} 
+
+.lm-clear {
+	clear: both;
+}
+
+.lm-divider {
+	border-bottom: 2px solid #041E42;
+}
+
+.lm-slider .content {
+    height        : 200px; /*250px;*/
+    width         : 100%;
+    position      : relative;
+    overflow      : hidden;
+    padding-bottom: 5px;
+}
+
+.lm-schedule-slider {
+	padding-top: 0;
+	position   : absolute;
+	z-index    : 1;
+	left       : 0;
+	top        : 0;
+	width      : 3000px;
+	height     : 200px; /*250px;*/
+	overflow   : hidden;
+}
+
+ .lm-slider .game-block {
+	float: left;
+	margin: 0;
+	background: rgba(0, 0, 0, 0);
+	width: 167px;
+	text-align: center;
+	color: #0A1E3F;
+}
+
+.lm-slider .game-block .date {
+    width          : 95%;
+    margin         : 0 auto;
+    text-transform : uppercase;
+    font-size      : 12px;
+    font-family    : "Roboto Condensed",Arial;
+    font-weight    : bold;
+    border-bottom  : 2px solid #0A1E3F;
+    color          : #0A1E3F;
+    margin-bottom  : 0;
+}
+
+.lm-slider .game-block .game-sport {
+	width: 95%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Roboto Condensed",Arial;
+    font-weight: bold;
+    color: #fff;
+    background-color: #bbb;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.lm-slider .matchup {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.lm-slider .matchup .team {
+	font-size    : 12px;
+	line-height  : 28px;
+	margin-bottom: 5px;
+	/*float        : left;*/
+	clear        : both;
+}
+
+.lm-slider .matchup .winner {
+	background-color: #eee;
+	font-weight     : bold;
+	
+}
+
+.lm-slider .matchup .team img {
+	padding-right:  5px;
+	vertical-align: middle;
+}
+
+.lm-slider .matchup .team .team-name {
+	float    : left;
+	color: red;
+	font-size: 12px;
+}
+
+.lm-slider span.score {
+	float    : right;
+	text-align: right;
+	font-size: 12px;
+	padding-right: 5px;
+}
+
+.lm-slider .matchup .time-status {
+	font-size    : 12px;
+	margin-bottom: 5px;
+	clear        : both;
+}
+
+.lm-slider .location {
+	font-size: 12px;
+	clear    : both;
+}
+
+/* slider controls */
+.lm-slider-right-arrow, 
+.lm-slider-left-arrow {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 10px;
+	min-height: 170px;
+	height:auto;
+	cursor: pointer;
+	display: block;
+	line-height: 170px;
+	font-size: 36px;
+	color: #666;
+}
+
+.lm-slider-right-arrow {
+	right: 0;
+}
+
+.lm-slider-left-arrow {
+	left: 0;
+}
+
+.lm-slider-left-arrow:hover, 
+.lm-slider-right-arrow:hover {
+	background-color: #efefef;
+}
+
+.lm-pad {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/******************************************************/
+/* Styles for the League Schedule Ticker  */
+/******************************************************/
+div.lmt-ticker-container {
+	width    : 725px; /*8 games displayed (8*80 blocks + 9*5 pad + 2*20 controls)*/
+	height   : 106px;
+	border   : none;
+	margin   : 0 auto;
+	/*overflow : hidden;*/
+}
+
+div.lmt-header {
+	width       : 100%;
+	font-weight : bold;
+	font-size   : 11px;
+	background  : #3F3F3F url(../images/lmt-header-bkgd.png ) top left no-repeat;
+	height      : 19px;
+	color       : #FFF;
+}
+
+div.lmt-title, 
+div.lmt-link, 
+div.lmt-message {
+	padding     : 2px 10px;
+	font-weight : bold;
+}
+
+div.lmt-title {
+	float: left;
+	margin-right: 10px;
+}
+
+div.lmt-link {
+	float: left;
+}
+
+div.lmt-link a, div.lmt-link a:active, div.lmt-link a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
+div.lmt-link a:hover {
+	text-decoration: none;
+}
+
+div.lmt-message {
+	float: right;
+}
+
+div.lmt-ticker-holder {
+	clear            : both;
+	position         : relative;
+	width            : 100%;
+	padding          : 0;
+	background-color : white; /*#818387;*/
+	height           : 82px;
+	margin-top       : 0px;
+	/*overflow         : hidden;*/
+	/*border: green 1px solid;*/
+}
+
+div.lmt-viewport {
+	position : absolute;
+	left     : 25px;
+	top      : 0;
+	height   : 80px;
+	width    : 700px;
+	overflow : hidden;
+}
+
+div.lmt-prev,
+div.lmt-next {
+	cursor   : pointer;
+	height   : 80px;
+	width    : 20px;
+	position : absolute;
+	top      : 0px;
+}
+
+div.lmt-prev {
+	background: url("../images/prev.png") no-repeat scroll 0px 0px rgba(0, 0, 0, 0);
+	left      : 0;
+}
+
+div.lmt-next {
+	background : url("../images/next.png") no-repeat scroll 0px 0px rgba(0, 0, 0, 0);
+	right      : 0;
+}
+
+div.lmt-ticker-content {
+	margin   : 0;
+	/*overflow : hidden;*/
+	padding  : 0;
+	top      : 0;
+	position : absolute;
+	left     : 0;
+	height   : 82px;
+	/*width    : 680px; /*display 8 games by default 8*80 + 9*5*/
+	/*width: 845px; display 10 games by default 10*80 + 9*5*/
+}
+
+div.lmt-ticker-content ul {
+	margin  : 0;
+	width   : 8400px;  /*allows for up to 100 games per ticker*/
+}
+
+div.lmt-ticker-content ul li {
+	width      : auto;
+	font-size  : 10px;
+	list-style : none;
+	float      : left;
+	/*display    : inline-block;*/
+	margin     : 0 5px 0 0;
+	background : white;
+}
+
+div.lmt-team.lmt-winner {
+	font-weight: 800;
+	color: #000;
+}
+
+div.lmt-game-header {
+	float       : left;
+	background  : #bbb;
+	color       : #000;
+	width       : 80px;
+	font-size   : 12px;
+	margin      : 0 0 3px 0;
+}
+
+p.lmt-status {
+	font-size     : 12px;
+	font-weight   : bold;
+	padding-left  : 3px;
+	margin        : 0;
+}
+
+p.lmt-header-status {
+	float:left;
+	margin: 0;
+	padding: 2px;
+	line-height: 10px;
+	font-weight: 800;
+}
+
+div.lmt-sport {
+	font-size   : 12px;
+	font-weight : bold;
+	line-height : 14px;
+	margin      : 0 0 3px 0;
+}
+
+div.lmt-team {
+	clear       : both;
+	color       : #333;
+	margin      : 0 0 3px 0;
+	height      : 14px;
+}
+
+div.team.winner {
+	font-weight      : bold;
+	background-color : #eee;
+}
+
+li.lmt-list-item .team {
+	height        : 14px;
+	margin-bottom : 5px;
+}
+
+li.lmt-list-item .team img {
+	float          : left;
+	vertical-align : middle;
+	padding-right  : 5px;
+	height         : 14px;
+}
+
+li.lmt-list-item p.team-name,
+li.lmt-list-item p.team-score {
+	float         : left;
+	margin        : 0;
+	padding       : 0;
+	line-height   : 14px;
+	font-size     : 12px;
+	margin-bottom : 0;
+}
+
+li.lmt-list-item .team p.team-name {
+	float :left;
+}
+
+li.lmt-list-item .team p.team-score {
+	float :right;
+}
+
+.lmt-ticker-content ul {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+ 

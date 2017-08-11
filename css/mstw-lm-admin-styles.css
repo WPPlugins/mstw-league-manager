@@ -1,0 +1,156 @@
+/* 
+ * MSTW League Manager Admin Stylesheet [mstw_lm-admin_styles.css]  
+ *
+ *	MSTW Wordpress Plugins (http://shoalsummitsolutions.com)
+ *	Copyright 2015 Mark O'Donnell (mark@shoalsummitsolutions.com)
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by
+ *	the Free Software Foundation, either version 3 of the License, or
+ *	(at your option) any later version.
+
+ *	This program is distributed in the hope that it will be useful,
+ *	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *	GNU General Public License for more details.
+ *
+ *	You should have received a copy of the GNU General Public License
+ *	along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *--------------------------------------------------------------------------*/
+
+.lm-settings {
+	/*background-color: #fff;*/
+}
+
+table.mstw-lm-admin-table {
+	/*margin-left: 20px;*/
+	margin-top:  0;
+	border-left: 0;
+	background-color: #f1f1f1;
+}
+
+table.mstw-lm-admin-table th.right {
+	text-align: right;
+	}
+
+
+/*
+table.mstw-lm-admin-table th {
+	padding: 0 10px 20px 0;
+	vertical-align: middle;
+}
+
+table.mstw-lm-admin-table td {
+	padding: 0 10px 15px 10px;
+	vertical-align: middle;
+}
+*/
+
+.mstw-lm-admin-table td.row-head,
+.mstw-lm-admin-table thead tr th {
+	font-weight: 600;
+}
+
+table.mstw-lm-admin-table .col-indent-1 {
+	margin-left: 20px;
+}
+ 
+/* adjust the columns that aren't the leftmost column in the form table */  
+th.mstw-admin-align-right,
+td.mstw-admin-align-right {
+    text-align: right;
+	}
+
+/* this is for control titles at the top of tables */
+div.mstw-lm-controls {
+	padding-bottom: 10px;
+}
+
+span.mstw-lm-control-title,  span.mstw-lm-control-title-2 {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+/* want space on the right of the first control */
+span.mstw-lm-control-title-2 {
+    padding-left: 10px;
+}
+
+/* tighten up the form a bit */
+select.game_location, select.game_home_team, select.game_away_team {
+	max-width: 150px;
+}
+	
+.form-table.mstw-lm-admin-table td {
+	vertical-align: top;
+	}
+	
+td.mstw-plugin-not-installed {
+	color: red;
+	font-weight: bold;
+	}
+	
+.mstw-lm-admin-instructions {
+    /* font-weight:   bold; */
+	font-weight:   normal;
+	font-size:     13px;
+	font-style:    italic;
+    color:         #F00;
+    margin:        0;
+    margin-bottom: 3px;
+	}
+	
+ul.mstw-lm-admin-instructions {
+    list-style:     disc;
+	/*font-style:     italic;
+	font-weight:    normal;
+    color:          #F00;*/
+	padding-left:   1.5em;
+    margin-bottom:  3px;
+	}
+	
+button.ui-datepicker-current { 
+	display: none; 
+	}
+
+/* This is not high enough in the cascade */
+.ui-datepicker .ui-datepicker-buttonpane button { 
+	float: left; 
+	}
+	
+/* adjust the buttons in the Update Team Records screen nav bar */
+/*
+form#set-league input.button {
+	float:         left;
+	margin-right:  6px;
+	}
+*/
+
+form#set-league div.mstw-lm-admin-instructions {
+	line-height: 28px; /* matches button height */
+	float:       left;
+	}
+	
+/* hide parent field in Edit League screen */
+body.taxonomy-mstw_lm_league form#edittag tr.term-parent-wrap {
+	display: none;
+	}
+
+/* hide leagues (tag) metabox on Edit Game screen */
+div#tagsdiv-mstw_lm_league {
+	/*display: none;*/
+	}	
+	
+form#seasons-list div.tablenav.bottom {
+	height: auto;
+}
+
+/* title for the game info (content) editor */
+p.league-info-admin-head {
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+	
